@@ -1,0 +1,5 @@
+server: Ahora cuando entra un nuevo jugador asigna su posición y envía su nombre y posición.
+
+cliet: se conecta al servidor y recibe mensajes, se asigna jugador y posición pero no la representa,
+
+
