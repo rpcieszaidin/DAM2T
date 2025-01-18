@@ -1,0 +1,33 @@
+import express, { Application, Request, Response } from 'express';
+import bodyParser from 'body-parser';
+import dotenv from 'dotenv';
+import cors from 'cors';
+import http from 'http';
+import { Server } from 'socket.io';
+import { Player } from './player/entities/Player';
+import { RoomService } from './room/RoomService';
+import { ServerService } from './server/ServerService';
+
+
+dotenv.config();
+
+const app: Application = express();
+const PORT = process.env.PORT || 3000;
+
+const httpServer = http.createServer();
+ServerService.getInstance().init(httpServer);
+
+app.get('/', async (req: Request, res: Response): Promise<Response> => {
+    return res.status(200).send({
+        message: 'Hello World!',
+    });
+});
+
+try {
+    httpServer.listen(PORT, (): void => {
+        console.log(`Connected successfully on port ${PORT}`);
+    });
+} catch (error: any) {
+    console.error(`Error occurred: ${error.message}`);
+}
+
