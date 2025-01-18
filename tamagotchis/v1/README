@@ -1,0 +1,3 @@
+server: Ahora envía mensajes al cliente.
+cliet: se conecta al servidor y recibe mensajes.
+
