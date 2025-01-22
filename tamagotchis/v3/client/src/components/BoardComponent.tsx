@@ -8,7 +8,9 @@ import { GameService } from '../services/GameService';
 
 const BoardComponent = () => {
     const boardTiles: Board | null = GameStore((state) => state.board);
-    
+    const data = boardTiles.board;
+    const numColumns = boardTiles.size; 
+
     useEffect(() => {
         const changeBoard = GameStore.getState().setBoard;
         changeBoard(boardTiles);
@@ -16,21 +18,15 @@ const BoardComponent = () => {
     }, [boardTiles])
 
     return (
-        <View style={styles.overlay}>
-        <FlatList
-            key={`board${boardTiles?.size}`}
-            data={boardTiles?.board.flat()}
-            keyExtractor={(item) => item.id}
-            numColumns={boardTiles?.size} 
-            renderItem={({ item }) => (
-                <Tile ref={(ref) => {
-                    if (boardTiles != null) {
-                        boardTiles.board[item.y][item.x].ref = ref;
-                    }
-                }} colIndex={item.x} rowIndex={item.y} value={item.value} />
-            )}
-            contentContainerStyle={styles.grid}
-        />
+
+        <View style={[styles.gridContainer, { width: `${numColumns * 100}px` }]}>
+        {data.map((item, index) => (
+           <Tile ref={(ref) => {
+            if (boardTiles != null) {
+                boardTiles.board[item.y][item.x].ref = ref;
+            }
+            }} colIndex={item.x} rowIndex={item.y} value={item.value} /> 
+        ))}
         </View>
     )
 }

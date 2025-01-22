@@ -1,0 +1,18 @@
+current directory: /Users/rajibe/node/segundoTrimestre/dam/practica1/Animacion/vendor/bundle/ruby/3.3.0/gems/nkf-0.2.0/ext/nkf
+/Users/rajibe/.rbenv/versions/3.3.5/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/rajibe/node/segundoTrimestre/dam/practica1/Animacion/vendor/bundle/ruby/3.3.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= sitearchdir\=./.gem.20250109-33290-uq0hky sitelibdir\=./.gem.20250109-33290-uq0hky clean
+
+current directory: /Users/rajibe/node/segundoTrimestre/dam/practica1/Animacion/vendor/bundle/ruby/3.3.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= sitearchdir\=./.gem.20250109-33290-uq0hky sitelibdir\=./.gem.20250109-33290-uq0hky
+compiling nkf.c
+linking shared-object nkf.bundle
+
+current directory: /Users/rajibe/node/segundoTrimestre/dam/practica1/Animacion/vendor/bundle/ruby/3.3.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= sitearchdir\=./.gem.20250109-33290-uq0hky sitelibdir\=./.gem.20250109-33290-uq0hky install
+/usr/bin/install -c -m 0755 nkf.bundle ./.gem.20250109-33290-uq0hky
+
+current directory: /Users/rajibe/node/segundoTrimestre/dam/practica1/Animacion/vendor/bundle/ruby/3.3.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= sitearchdir\=./.gem.20250109-33290-uq0hky sitelibdir\=./.gem.20250109-33290-uq0hky clean
